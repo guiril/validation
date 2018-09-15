@@ -5,44 +5,222 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>06 validation</title>
+  <title>Validation</title>
   <link rel="stylesheet" href="css/all.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
     crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
 </head>
 
 <body>
-  <div class="top-line"></div>
-  <form action="#" class="msform">
-    <!-- progressbar -->
-    <ul class="progressbar">
-      <li class="active">
-        <div class="circle"></div>
-      </li>
-      <li>
-        <div></div>
-      </li>
-      <li>
-        <div></div>
-      </li>
-      <li>
-        <div></div>
-      </li>
-    </ul>
-    <!-- fieldsets -->
-    <fieldset>
-      <h2>Create Account</h2>
-      <h3>Glad to see you here!</h3>
-      <label for="account">Account</label>
-      <input type="email" name="account" id="account" placeholder="example@email.com">
-      <label for="password">Password</label>
-      <input type="password" name="password" id="password" placeholder="●●●●●●●●">
-      <label for="cpassword">Password</label>
-      <input type="password" name="cpassword" id="cpassword" placeholder="●●●●●●●●">
-      <input type="button" value="SUBMIT & NEXT" name="next" class="next-bt">
-    </fieldset>
-  </form>
+  <div class="container">
+    <div class="top-line"></div>
+    <div class="progress-bar">
+      <div class="step"><i class="far fa-dot-circle"></i></div>
+      <div class=""><i class="far fa-circle"></i></div>
+      <div class=""><i class="far fa-circle"></i></div>
+      <div class=""><i class="far fa-circle"></i></div>
+    </div>
+    <!-- STEP 1 -->
+    <div class="step1">
+      <div class="title text-center">
+        <h1>Create Account</h1>
+        <p>Glad to see you here!</p>
+      </div>
+      <form action="#" name="form1" class="text-left">
+        <div class="form-group">
+          <label for="account">Account</label>
+          <input type="email" class="form-control" id="account" name="account" placeholder="example@email.com">
+          <div class="invalid-tooltip">INVALID EMAIL</div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="●●●●●●●●">
+          <div class="invalid-tooltip">MINIMUM 8 CHARACTERS</div>
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="●●●●●●●●">
+          <div class="invalid-tooltip">NOT MATCH</div>
+        </div>
+        <div class="form-group">
+          <button type="submit" name="btn1" class="btn btn-lg btn-primary mt-2" disabled>SUBMIT & NEXT</button>
+        </div>
+      </form>
+    </div>
+    <!-- STEP 2 -->
+    <div class="step2">
+      <div class="title text-center">
+        <h1>General Infomation</h1>
+        <p>Tell us who you are!</p>
+      </div>
+      <form name="form2" action="">
+        <div class="form-row">
+          <div class="form-group col-6">
+            <label for="name">Name <span class="small-text">(optional)</span></label>
+            <input type="text" name="name" class="form-control" id="name" placeholder="Example Name">
+          </div>
+          <div class="form-group col-6">
+            <label for="phone">Phone</label>
+            <input type="tel" name="phone" class="form-control" id="phone" placeholder="0912345678" maxlength="10">
+            <div class="invalid-tooltip">NUMBERS ONLY</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Birth Date <span class="small-text">(optional)</span></label>
+          <div class="form-row">
+            <div class="form-group col-4">
+              <select class="form-control" name="birthYear">
+                <option value="" hidden>YYYY</option>
+              </select>
+            </div>
+            <div class="form-group col-4">
+              <select class="form-control" name="birthMonth">
+                <option value="" hidden>MM</option>
+              </select>
+            </div>
+            <div class="form-group col-4">
+              <select class="form-control" name="birthDay">
+                <option value="" hidden>DD</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Address</label>
+          <div class="form-row">
+            <div class="form-group col-6">
+              <select class="form-control" name="city">
+                <option value="" hidden>City</option>
+                <option value="基隆市">基隆市</option>
+                <option value="臺北市">臺北市</option>
+                <option value="新北市">新北市</option>
+                <option value="桃園市">桃園市</option>
+                <option value="新竹市">新竹市</option>
+                <option value="新竹縣">新竹縣</option>
+                <option value="宜蘭縣">宜蘭縣</option>
+                <option value="苗栗縣">苗栗縣</option>
+                <option value="臺中市">臺中市</option>
+                <option value="彰化縣">彰化縣</option>
+                <option value="南投縣">南投縣</option>
+                <option value="雲林縣">雲林縣</option>
+                <option value="嘉義市">嘉義市</option>
+                <option value="嘉義縣">嘉義縣</option>
+                <option value="臺南市">臺南市</option>
+                <option value="高雄市">高雄市</option>
+                <option value="屏東縣">屏東縣</option>
+                <option value="澎湖縣">澎湖縣</option>
+                <option value="花蓮縣">花蓮縣</option>
+                <option value="臺東縣">臺東縣</option>
+                <option value="金門縣">金門縣</option>
+                <option value="連江縣">連江縣</option>
+              </select>
+            </div>
+            <div class="form-group col-6">
+              <select class="form-control" name="dist">
+                <option value="" hidden>Dist</option>
+              </select>
+            </div>
+          </div>
+          <input type="text" name="address" class="form-control mt-3" placeholder="Address Detail">
+        </div>
+        <div class="form-group mt-4">
+          <button type="submit" name="btn2" class="btn btn-lg btn-primary" disabled">SUBMIT & NEXT</button>
+        </div>
+      </form>
+    </div>
+    <!-- STEP 3 -->
+    <div class="step3">
+      <div class="title text-center">
+        <h1>Update Profile Picture</h1>
+        <p>We wanna know you more!</p>
+      </div>
+      <form name="form3" action="" enctype="multipart/form-data">
+        <div class="form-group text-center">
+          <label class="upload">
+            <input type="file" name="upload" class="form-control file-loading" accept="image/*">
+            <span class="upload-icon align-middle"><i class="fas fa-images"></i></span>
+            <span class="upload-text text-left align-middle">UPLOAD UP TO 3 PHOTOS<br><span>MAXIMUM SIZE: 150*150px</span></span>
+          </label>
+          <div class="warning pt-3 pb-3"><i class="fas fa-exclamation-triangle"></i> ONE FILE IS OVER THE MAXIMUM SIZE</div>
+          <ul class="images-list mt-4 pl-0"></ul>
+        </div>
+        <div class="form-group mt-4">
+          <button type="submit" name="btn3" class="btn btn-lg btn-primary" disabled>SUBMIT & NEXT</button>
+        </div>
+      </form>
+    </div>
+    <!-- STEP 4 -->
+    <div class="step4">
+      <div class="title text-center">
+        <h1>Payment Method</h1>
+        <p>Add your credit card infomation!</p>
+      </div>
+      <form name="form4" action="">
+        <div class="form-group credit-card">
+          <label for="cardNumber">Card Number</label>
+          <input type="text" class="form-control pr-5" name="cardNumber" id="cardNumber" placeholder="1234 5678 9012 3456"
+            maxlength="19">
+          <i class="fas fa-credit-card"></i>
+          <div class="invalid-tooltip">INVALID NUMBER</div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-6">
+            <label for="cardholder">Cardholder Name</label>
+            <input type="text" class="form-control" name="cardholder" id="cardholder" placeholder="EXAMPLE NAME">
+          </div>
+          <div class="form-group col-6">
+            <label for="bank">Bank Name</label>
+            <input type="text" class="form-control" name="bank" id="bank" placeholder="EXAMPLE BANK">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-4">
+            <label for="cvv">CVV</label>
+            <input type="text" class="form-control" name="cvv" id="cvv" placeholder="123" maxlength="3">
+          </div>
+          <div class="col-8">
+            <label>Expire Date</label>
+            <div class="form-row">
+              <div class="col-6">
+                <select class="form-control" name="expireMonth">
+                  <option value="" hidden>MM</option>
+                </select>
+              </div>
+              <div class="col-6">
+                <select class="form-control" name="expireYear">
+                  <option value="" hidden>YY</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group mt-4">
+          <button type="submit" name="btn4" class="btn btn-lg btn-primary" disabled>DONE</button>
+        </div>
+      </form>
+    </div>
+    <!-- STEP 5 -->
+    <div class="step5">
+      <div class="title text-center">
+        <h1>Congratulations</h1>
+        <p>Now you’re one of us!</p>
+        <div class="success-message">
+          <i class="fas fa-smile"></i>
+          <p class="mt-5">Redirected to homepage after 5 seconds…</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
+    <script src="js/all.js"></script>
 </body>
 
 </html>

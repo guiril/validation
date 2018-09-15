@@ -1,120 +1,178 @@
-@import 'reset';
-@import 'clearfix';
-@import 'box-sizing';
+$blue: #0275D8;
+$light-blue: #BEE1FF;
+$orange: #F5A623;
+$gray: #9B9B9B;
 
-$primary-color: #0275D8;
-$secondary-color: #BEE1FF;
+$font-size: 16px;
 
-body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  color: #000;
-  background: #fff;
-  line-height: 1.2;
+*, body {
+  font-family: apple-system, BlinkMacSystemFont, "Microsoft JhengHei", "Segoe UI",  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-input,
-label {
-  font-family: inherit;
-  font-size: 20px;
-  display: block;
-  outline: none;
-}
-
-h2 {
-  font-size: 48px;
-  margin-top: 41px;
-}
-
-h3 {
-  font-size: 24px;
-  margin-bottom: 24px; 
-}
-
-h2,
-h3 {
-  font-weight: 300;
-  text-align: center;
+h1 {
+  font-size: $font-size * 3 !important;
 }
 
 .top-line {
   width: 456px;
-  border-top: 8px solid $primary-color;
+  height: 8px;
   margin: 0 auto;
-  margin-bottom: 55px; 
+  background: $blue;
 }
 
-.msform {
+.progress-bar {
+  position: relative;
+  width: 234px;
+  margin: 60px auto;
+  border: 2px solid $light-blue;
+  > div {
+    position: absolute;
+    color: $light-blue;
+    i {
+      font-size: 16px;
+      background-color: #fff;
+    }
+    &:first-child {
+      left: -2px;
+    }
+    &:nth-child(2) {
+      margin-left: 68px;
+    }
+    &:nth-child(3) {
+      margin-left: 142px;
+    }
+    &:last-child {
+      margin-left: 220px;
+    }
+    &.step {
+      color: $blue;
+    }
+  }
+}
+
+.title { 
+  p {
+    font-size: $font-size * 1.5;
+  }
+}
+
+.step2,
+.step3,
+.step4,
+.step5 {
+  display: none;
+}
+
+form {
   width: 460px;
   margin: 0 auto;
-  input {
-    border-radius: 8px;
-    border-style: none;
-    border: 2px solid #000000;
-    margin-bottom: 25px; 
-    width: 100%;
-    padding: 12px 20px;
-  }
   label {
-    margin-bottom: 8px;
+    font-size: $font-size * 1.25;
   }
-  .next-bt {
-    background: $secondary-color;
-    border: 2px solid $secondary-color;
-    color: #fff;
-    margin-top: 40px;
-    &:hover {
-      background: $primary-color;
-      border-color: $primary-color;
-      cursor: pointer;
+}
+
+button {
+  width: 100%;
+}
+
+.form-group {
+  position: relative;
+}
+
+.invalid-tooltip {
+  position: absolute;
+  right: 0;
+}
+
+.small-text {
+  font-size: $font-size;
+}
+
+.upload {
+  position: relative;
+  width: 460px;
+  height: 140px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  color: $gray;
+  cursor: pointer;
+  input {
+    display: none;
+  }
+  .upload-icon {
+    display: inline-block;
+    font-size: $font-size * 3;
+    margin-top: 30px;
+  }
+  .upload-text {
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 30px;
+    span {
+      font-size: 14px;
     }
   }
 }
 
-.progressbar {
-  width: 300px;
-  margin: 0 auto;
-  overflow: hidden;
-  @include clearfix;
-  li {
-    width: 25%;
-    float: left;
+.warning {
+  display: none;
+  width: 460px;
+  color: #fff;
+  background: $orange;
+  border: 2px solid $orange;
+  border-radius: 8px;
+  font-size: $font-size * 1.25;
+}
+
+.images-list {
+  .img {
+    display: inline-block;
     position: relative;
-    &:before {
-      content: '';
-      width: 12px;
-      height: 12px;
-      display: block;
-      border: 2px solid $secondary-color;
-      background: #fff;
-      border-radius: 50%;
-      margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    &:hover {
+      a {
+        display: block;
+      }
     }
-    &:after {
-      content: '';
-      width: 100%;
-      height: 2px;
-      background:$secondary-color;
+    img {
+      max-width: 150px;
+      max-height: 150px;
+      }
+    a {
+      display: none;
       position: absolute;
-      left: -50%;
-      top: 8px;
-      z-index: -1; /*put it behind the numbers*/
+      bottom: 30px;
+      right: 15px;
+      width: 120px;
+      height: 52px;
+      line-height: 52px;
+      font-size: $font-size * 1.25;
+      background: $blue;
+      color: #fff;
     }
-    &:first-child:after {
-	    content: none; 
-    }
-    &.active:before {
-      border-color: $primary-color; 
-    }
-    > div.circle {
-      width: 8px;
-      height: 8px;
-      background: $primary-color;
-      border-radius: 50%;
-      position: absolute;
-      top: 4px;
-      left: 34px;
-      z-index: 10;
-    }
+  }
+}
+
+.credit-card {
+  position: relative;
+  .fa-credit-card {
+    position: absolute;
+    right: 14px;
+    bottom: 10px;
+    color: $gray;
+  }
+}
+
+.success-message {
+  i {
+    color: $light-blue;
+    font-size: $font-size * 18;
+  }
+  p {
+    color: $blue;
+    font-size: $font-size * 1.25;
+    font-style: italic;
   }
 }
