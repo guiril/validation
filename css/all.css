@@ -13,19 +13,19 @@ h1 {
   background: #0275D8;
 }
 
-.progressbar {
+ul.progressbar {
   width: 234px;
   margin: 60px auto;
   overflow: hidden;
 }
 
-.progressbar::after {
+ul.progressbar::after {
   display: block;
   clear: both;
   content: "";
 }
 
-.progressbar > li {
+ul.progressbar > li {
   position: relative;
   float: left;
   list-style-type: none;
@@ -33,14 +33,14 @@ h1 {
   color: #BEE1FF;
 }
 
-.progressbar > li:before {
+ul.progressbar > li:before {
   font-family: "Font Awesome 5 Free";
   content: '\f111';
   z-index: 10;
   background: #fff;
 }
 
-.progressbar > li:after {
+ul.progressbar > li:after {
   content: '';
   background: #BEE1FF;
   width: 100%;
@@ -51,25 +51,25 @@ h1 {
   z-index: -1;
 }
 
-.progressbar > li:first-child:after {
+ul.progressbar > li:first-child:after {
   content: none;
 }
 
-.progressbar > li i {
+ul.progressbar > li i {
   font-size: 16px;
   background-color: #fff;
 }
 
-.progressbar > li.active:before {
+ul.progressbar > li.active:before {
   color: #0275D8;
   content: '\f192';
 }
 
-.progressbar > li.active:after {
+ul.progressbar > li.active:after {
   background: #0275D8;
 }
 
-.progressbar > li.active.done:before {
+ul.progressbar > li.active.done:before {
   content: '\f058';
   font-weight: 900;
 }
