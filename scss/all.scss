@@ -45,6 +45,7 @@ ul {
         content: '\f111';
         z-index: 10;
         background: #fff;
+        transition: all .3s;
       }
       &:after {
         content: '';

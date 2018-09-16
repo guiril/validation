@@ -38,6 +38,8 @@ ul.progressbar > li:before {
   content: '\f111';
   z-index: 10;
   background: #fff;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 ul.progressbar > li:after {
