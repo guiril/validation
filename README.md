@@ -1,3 +1,3 @@
 # The F2E - Validation
-* Scss
-* JavaScript
+* Bootstrap 排版
+* 表單驗證：正規表示法
