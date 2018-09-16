@@ -434,3 +434,18 @@ stepFourBtn.addEventListener('click', function (e) {
   document.querySelector('.step4').style.display = 'none';
   document.querySelector('.step5').style.display = 'block';
 }, false);
+
+// PROGRESS BAR
+$(document).ready(function () {
+
+  $('.btn').click(function () {
+    var currentBlock = $(this).parents('.block');
+    var nextBlock = $(this).parents('.block').next();
+
+    $('.progressbar li').eq($('.block').index(currentBlock)).addClass('done');
+    $('.progressbar li').eq($('.block').index(nextBlock)).addClass('active');
+
+    nextBlock.show();
+
+  });
+});
