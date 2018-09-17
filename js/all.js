@@ -444,8 +444,5 @@ $(document).ready(function () {
 
     $('.progressbar li').eq($('.block').index(currentBlock)).addClass('done');
     $('.progressbar li').eq($('.block').index(nextBlock)).addClass('active');
-
-    nextBlock.show();
-
   });
 });
