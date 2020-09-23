@@ -1,8 +1,11 @@
 # Validation
 
-第一屆 The F2E 第六週關卡 Validation，以 JavaScript 在前端進行表單驗證，並使用 Bootstrap 完成視覺畫面。
+第一屆 The F2E 第六週關卡「Validation」，以 JavaScript 在前端進行表單驗證，並使用 Bootstrap 完成視覺畫面。
 
 ## Demo
+
+**Validation**：
+[https://ouiis.github.io/validation/](https://ouiis.github.io/validation/ "Validation")
 
 ## 主要練習技術
 
