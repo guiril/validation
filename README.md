@@ -2,7 +2,8 @@
 
 第一屆 The F2E 第六週關卡「Validation」，以 JavaScript 在前端進行表單驗證，並使用 Bootstrap 完成視覺畫面。
 
-[View the UI design mockup](https://hexschool.github.io/THE_F2E_Design/week6-validation/)
+- [Challenge Introduction](https://challenge.thef2e.com/news/6)
+- [View the UI design mockup](https://hexschool.github.io/THE_F2E_Design/week6-validation/)
 
 ## Demo
 
