@@ -3,6 +3,13 @@
 - [Challenge Introduction](https://challenge.thef2e.com/news/6)
 - [View the UI design mockup](https://hexschool.github.io/THE_F2E_Design/week6-validation/)
 
+## 主要練習技術
+
+* 使用 JavaScript 進行表單驗證，符合規則方能進行下一步。
+  * 運用到正規表示法
+  * 上傳圖片並預覽圖片
+* 使用 Bootstrap 排版。
+
 ## Demo
 
 Create Account：
@@ -25,9 +32,3 @@ Congratulations：
 
 ![Congratulations](https://i.imgur.com/UAtSLlC.jpg)
 
-## 主要練習技術
-
-* 使用 JavaScript 進行表單驗證，符合規則方能進行下一步。
-  * 運用到正規表示法
-  * 上傳圖片並預覽圖片
-* 使用 Bootstrap 排版。
